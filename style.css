@@ -1,0 +1,100 @@
+/* Minimalist Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffffff;
+    color: #000000;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+    /* Centers the container itself */
+    margin: 0 auto; 
+}
+
+/* Header & Intro */
+.intro {
+    text-align: center; /* Keeps 'Hi there' and Name centered */
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin: 10px 0 20px;
+    letter-spacing: -0.02em;
+}
+
+/* Justified Content Blocks */
+.bio, .post p {
+    text-align: center;
+    text-justify: inter-word;
+    hyphens: auto; 
+    margin-bottom: 15px;
+}
+
+/* Social Links - remains centered for balance */
+.social-links {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.social-links a {
+    margin: 0 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-decoration: none;
+    color: #000;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #eeeeee;
+    margin: 40px auto;
+    width: 50px;
+}
+
+/* Blog Titles and Dates remain centered for a clear anchor */
+.post {
+    margin-bottom: 50px;
+}
+
+.post h2, .date {
+    text-align: center;
+}
+
+.post h2 {
+    font-size: 1.25rem;
+    margin-bottom: 5px;
+}
+
+.date {
+    display: block;
+    font-size: 0.8rem;
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.read-more {
+    font-style: italic;
+    font-size: 0.9rem;
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 0.9rem;
+    padding-bottom: 40px;
+}
