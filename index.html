@@ -1,48 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-0K0T4MNDDX"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chandra Prakash Bairagi</title>
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          },
+          colors: {
+            ink: '#111827',
+            muted: '#4B5563',
+            lightmuted: '#9CA3AF',
+            borderline: '#E5E7EB',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* Smooth anti-aliased font rendering */
+    body {
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background-color: #fafafa;
+    }
 
-        gtag('config', 'G-0K0T4MNDDX');
-    </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chandra Prakash Bairagi</title>
-    <link rel="stylesheet" href="style.css">
+    /* Soft entry animation for cards */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+
+    /* Subtle hover underline effect for links */
+    .link-hover-effect {
+      position: relative;
+      display: inline-block;
+      letter-spacing: 0.08em;
+      transition: color 0.2s ease;
+    }
+
+    .link-hover-effect::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      transform: scaleX(0);
+      height: 1.5px;
+      bottom: -2px;
+      left: 0;
+      background-color: #111827;
+      transform-origin: bottom right;
+      transition: transform 0.25s ease-out;
+    }
+
+    .link-hover-effect:hover::after {
+      transform: scaleX(1);
+      transform-origin: bottom left;
+    }
+  </style>
 </head>
-<body>
+<body class="min-h-screen text-ink flex flex-col justify-center items-center px-5 py-14 selection:bg-neutral-900 selection:text-white">
 
-    <main class="container">
-        <header class="intro">
-            <p>Hi there! I am</p>
-            <h1>Chandra Prakash Bairagi</h1>
-            <div class="bio">
-                <p><strong>M. Tech. (Propulsion)</strong> in Aerospace Engineering, <br> Indian Institute of Technology, Kanpur,India <br> 2025 - 2027</p>
-                <p><strong>Manager, Digital Transformation (IT Shikhar)</strong>, <br>Tata Steel Limited, India <br> 2021 - 2025</p>
-                <p><strong>B.Tech (Honours)</strong> in Production Engineering, <br>National Institute of Technology, Trichy, India <br> 2017 - 2021</p>
-            </div>
-        </header>
+  <main class="w-full max-w-lg mx-auto flex flex-col items-center text-center animate-fade-in">
 
-        <nav class="social-links">
-            <a href="https://x.com/chndrprkshbrg">X</a>
-            <a href="https://chandraprakashbairagi.substack.com/">Substack</a>
-            <a href="https://www.linkedin.com/in/chandraprakashbairagi/">LinkedIn</a>
-            <a href="mailto:chandraprakash.nittrichy@gmail.com">Email</a>
-        </nav>
+    <!-- Greeting -->
+    <p class="text-base sm:text-lg font-normal text-muted tracking-tight mb-5">
+      Hi there! I am
+    </p>
 
-        <hr>
+    <!-- Circular Profile Picture -->
+    <div class="relative mb-5 group">
+      <div class="w-28 h-28 sm:w-32 sm:h-32 rounded-full overflow-hidden ring-1 ring-neutral-200 shadow-sm p-1 bg-white transition duration-300 transform group-hover:scale-105">
+        <img 
+          src="cpimage.jpg" 
+          alt="Profile photo of Chandra Prakash Bairagi"
+          class="w-full h-full object-cover rounded-full filter grayscale hover:grayscale-0 transition-all duration-500"
+        />
+      </div>
+    </div>
 
+    <!-- Name Heading -->
+    <h1 class="text-3xl sm:text-4xl font-extrabold tracking-tight text-ink mb-8">
+      Chandra Prakash Bairagi
+    </h1>
 
-        <footer>
-            <p>Thank You</p>
-        </footer>
-    </main>
+    <div class="space-y-6 w-full text-center">
+
+      <!-- Item 1: IIT Kanpur -->
+      <section class="flex flex-col items-center">
+        <h2 class="text-base sm:text-lg font-bold leading-snug">
+          M. Tech. (Propulsion) <span class="font-normal text-muted">in Aerospace Engineering,</span>
+        </h2>
+        <p class="text-sm sm:text-base text-muted font-normal mt-0.5">
+          Indian Institute of Technology, Kanpur, India
+        </p>
+        <span class="text-xs sm:text-sm font-normal text-lightmuted mt-0.5 tracking-wide">
+          2025 – 2027
+        </span>
+      </section>
+
+      <!-- Item 2: Tata Steel -->
+      <section class="flex flex-col items-center">
+        <h2 class="text-base sm:text-lg font-bold leading-snug">
+          Manager, Digital Transformation (IT Shikhar),
+        </h2>
+        <p class="text-sm sm:text-base text-muted font-normal mt-0.5">
+          Tata Steel Limited, India
+        </p>
+        <span class="text-xs sm:text-sm font-normal text-lightmuted mt-0.5 tracking-wide">
+          2021 – 2025
+        </span>
+      </section>
+
+      <!-- Item 3: NIT Trichy -->
+      <section class="flex flex-col items-center">
+        <h2 class="text-base sm:text-lg font-bold leading-snug">
+          B.Tech (Honours) <span class="font-normal text-muted">in Production Engineering,</span>
+        </h2>
+        <p class="text-sm sm:text-base text-muted font-normal mt-0.5">
+          National Institute of Technology, Trichy, India
+        </p>
+        <span class="text-xs sm:text-sm font-normal text-lightmuted mt-0.5 tracking-wide">
+          2017 – 2021
+        </span>
+      </section>
+
+    </div>
+
+    <nav aria-label="Social and contact links" class="mt-10 mb-8 w-full">
+      <div class="flex flex-wrap items-center justify-center gap-x-7 gap-y-3 font-semibold text-xs sm:text-sm uppercase tracking-wider text-ink">
+        <a 
+          href="https://x.com/chndrprkshbrg" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="link-hover-effect py-1 hover:text-black">
+          X
+        </a>
+        <a 
+          href="https://chandraprakashbairagi.substack.com/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="link-hover-effect py-1 hover:text-black">
+          Substack
+        </a>
+        <a 
+          href="https://www.linkedin.com/in/chandraprakashbairagi/" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          class="link-hover-effect py-1 hover:text-black">
+          LinkedIn
+        </a>
+        <a 
+          href="mailto:iamchandraprakashbairagi@gmail.com" 
+          class="link-hover-effect py-1 hover:text-black">
+          Email
+        </a>
+      </div>
+    </nav>
+
+    <!-- Minimalist Horizontal Divider -->
+    <div class="w-14 h-[1px] bg-neutral-300 rounded my-3" aria-hidden="true"></div>
+
+    <!-- Thank You Section -->
+    <footer class="mt-6 text-sm sm:text-base text-muted font-normal">
+      Thank You
+    </footer>
+
+  </main>
 
 </body>
-
 </html>
